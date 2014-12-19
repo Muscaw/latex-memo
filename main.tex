@@ -1,0 +1,253 @@
+\documentclass[a4paper, 11pt]{article}
+
+\newcommand{\coursename}{Guide de survie \LaTeX}
+\newcommand{\professor}{Kevin Grandjean}
+\newcommand{\me}{Kevin Grandjean}
+\newcommand{\term}{Automne 2014}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{notes}
+
+\lstnewenvironment{TeXlstlisting}{\lstset{language=[LaTeX]TeX}}{}
+
+%Headers
+\chead{\coursename}
+\lhead{\term}
+
+%%%%%TITLE%%%%%
+\newcommand{\notefront} {
+\pagenumbering{roman}
+\begin{center}
+\textbf{{\Huge{\noun{\coursename}}}}\\ \vspace{0.1in}
+{\noun \professor} \ $\bullet$ \ {\noun \term} \ $\bullet$ \ {\noun {Maison}} \\
+\end{center}
+}
+
+\title{Template: Survival Guide}
+
+\begin{document}
+\notefront
+\tocandfigures
+
+\doabstract{Le but de ce document est d'avoir une base pour travailler et comprendre les différentes commandes qui composent le template.}
+
+\section{Définitions mathématiques} % (fold)
+\label{sec:d_finitions_math_matiques}
+Les définitions mathématiques peuvent être utilisées de la manière suivante:
+\begin{lstlisting}[language=TeX]
+\begin{defn}[addition]\label{addition}
+Une addition se fait avec le signe ``+''.
+\end{defn}
+\end{lstlisting}
+Résultat:
+\begin{defn}[addition]\label{addition}
+Une addition se fait avec le signe ``+''.
+\end{defn}
+% section d_finitions_math_matiques (end)
+
+\section{Alignement pour développement mathématique} % (fold)
+\label{sec:alignement_pour_d_veloppement_math_matique}
+On peut aligner des équations pour que leur signe \og = \fg soit verticalement aligné.
+Pour définir l'emplacement qui sera aligné, il faut utiliser le symbole \&.
+\begin{TeXlstlisting}
+\begin{align*}
+3 & = 1 + 2 \\
+&= 1 + 1 + 1
+\end{align*}
+\end{TeXlstlisting}
+
+Résultat:
+\begin{align*}
+3 & = 1 + 2 \\
+&= 1 + 1 + 1
+\end{align*}
+% section alignement_pour_d_veloppement_math_matique (end)
+
+\section{Références} % (fold)
+\label{sec:r_f_rences}
+On peut utiliser la commande \\label\{name\} pour indiquer une ancre à cet endroit. On peut ensuite pointer cet emplacement avec la commande \\nameref\{name\} qui permettra de directement se déplacer vers l'endroit pointé.
+% section r_f_rences (end)
+
+\section{Affichage de code} % (fold)
+\label{sec:affichage_de_code}
+Pour afficher du code, il suffit d'utiliser la commande suivante:
+
+\begin{TeXlstlisting}
+\begin{lstlisting}[language=java]
+void main(String[] args){
+	System.out.println("Hello");
+}
+\end{lstlisting}
+\end{TeXlstlisting}
+
+Résultat:
+\begin{lstlisting}[language=java]
+void main(String[] args){
+	System.out.println("Hello");
+}
+\end{lstlisting}
+% section affichage_de_code (end)
+
+\section{Liste des objets mathématiques} % (fold)
+\label{sec:liste_des_objets_math_matiques}
+\subsection{Bracket en bas}
+\begin{verbatim}
+\ub{h}
+\end{verbatim}
+$$\ub{h}$$
+
+\subsection{Bracket à gauche}
+\begin{verbatim}
+\piecewise{H}{e}{l}{l}
+\end{verbatim}
+$$\piecewise{H}{e}{l}{l}$$
+
+\subsection{Vecteurs (valeurs 2)}
+\begin{verbatim}
+\comb{4}{1}
+\end{verbatim}
+$$\comb{4}{1}$$
+
+\subsection{Parenthèse anguleuse}
+\begin{verbatim}
+\sip{2}{3}
+\end{verbatim}
+$$\sip{2}{3}$$
+
+\subsection{Fraction}
+\begin{verbatim}
+\f{H}{X}
+\end{verbatim}
+$$\f{H}{X}$$
+
+\subsection{Ensembles de nombres}
+\begin{verbatim}
+\Z \Q \R \C \N
+\end{verbatim}
+$$\Z \Q \R \C \N$$
+
+\subsection{Epsilon}
+\begin{verbatim}
+\e
+\end{verbatim}
+$$\e$$
+
+\subsection{Union et Inter}
+\begin{verbatim}
+\union \inter
+\end{verbatim}
+$$\union \inter$$
+
+\subsection{Into}
+\begin{verbatim}
+\into
+\end{verbatim}
+$$\into$$
+
+\subsection{Set de nombres}
+\begin{verbatim}
+\nset{a}
+\setk{a}{b}
+\bnset{a}
+\bset{a}{b}
+\end{verbatim}
+$$\nset{a}$$
+$$\setk{a}{b}$$
+$$\bnset{a}$$
+$$\bset{a}{b}$$
+
+\subsection{1 to n}
+\begin{verbatim}
+\ton{H}
+\end{verbatim}
+$$\ton{H}$$
+
+\subsection{1 to k}
+\begin{verbatim}
+\tok{H}{k}
+\end{verbatim}
+$$\tok{H}{k}$$
+
+\subsection{Opérateurs textuels (disc, span, rank, proj et perp)}
+\begin{verbatim}
+\disc \spn \rank \proj \prp
+\end{verbatim}
+$$\disc \spn \rank \proj \prp$$
+
+\subsection{Underline}
+\begin{verbatim}
+\ux \ua \uu
+\end{verbatim}
+$$\ux \ua \uu$$
+
+\subsection{Dérivées (Leibniz)}
+\begin{verbatim}
+\pfx \pfy \px \pxn{H} \py \jacu \jacx
+\end{verbatim}
+$$\pfx \pfy \px \pxn{H} \py \jacu \jacx$$
+
+\subsection{Vecteurs}
+\begin{verbatim}
+\vzero \va \vb \vc \vd \ve \vh \vn \vs \vu \vv \vw \vx \vy \vz
+\end{verbatim}
+$$\vzero \va \vb \vc \vd \ve \vh \vn \vs \vu \vv \vw \vx \vy \vz$$
+% section liste_des_objets_math_matiques (end)
+
+\section{Utilisation de styles} % (fold)
+Pour utiliser les styles, il faut utiliser le code suivant en remplaçant le style par celui voulu:
+\begin{TeXlstlisting}
+\begin{style}
+Texte
+\end{style}
+\end{TeXlstlisting}
+\label{sec:utilisation_de_styles}
+\subsection{Corollaire}
+\label{sub:corollaire}
+Remplacer par cor:
+\begin{cor}
+Ceci est un test.
+\end{cor}
+
+\subsection{Note}
+\label{sub:note}
+Remplacer par note:
+\begin{note}
+Ceci est un test.
+\end{note}
+
+\subsection{Notation} % (fold)
+\label{sub:notation}
+Remplacer par notation:
+\begin{notation}
+Ceci est un test.
+\end{notation}
+% subsection notation (end)
+
+\subsection{Exercice} % (fold)
+\label{sub:exercice}
+Remplacer par exercise(terme anglais):
+\begin{exercise}
+Ceci est un test.
+\end{exercise}
+% subsection exercice (end)
+
+\subsection{Solution} % (fold)
+\label{sub:solution}
+Remplacer par solution:
+\begin{solution}
+Ceci est un test.
+\end{solution}
+% subsection solution (end)
+
+\subsection{Abstrait} % (fold)
+\label{sub:abstrait}
+Utiliser \textbackslash doabstract\{Texte\} pour rendre le premier texte abstrait.
+%Pour les besoins du document, doabstract n'a pas été utilisé.
+\begin{abstract}
+Ceci est un test.
+\end{abstract}
+% subsection abstrait (end)
+% section utilisation_de_styles (end)
+
+\end{document}
