@@ -1,4 +1,7 @@
 %Modified the 18th december by Kevin Grandjean
+%Modified the 13th january by Kevin Grandjean
+%-Added newcommand limx
+%added newcommand derx dert derxx derxt dpri dsec dthi limdx
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -38,10 +41,7 @@ cleveref,% \cref
 \definecolor{dimgray}{rgb}{0.41, 0.41, 0.41}
 
 \geometry{verbose,tmargin=1.0in,bmargin=1.0in,lmargin=0.5in,rmargin=0.5in}
-\pagestyle{fancy}
 \PassOptionsToPackage{normalem}{ulem}
-\makeindex
-\makeatletter
 
 \setlength{\headheight}{15pt}
 
@@ -76,7 +76,7 @@ urlcolor=black
 
 \newcommand{\tocandfigures}{
 \rule[0.5ex]{1\columnwidth}{1pt}
-Last Revision: \today
+Dernière révision: \today
 \noindent \begin{flushleft}
 \makeatletter
 \makeatother
@@ -107,11 +107,36 @@ Last Revision: \today
 \pagenumbering{arabic}
 }
 
-\newcommand{\piecewise}[4]{\left\{
+\newcommand{\bracketthree}[3]{
+	\left\{
+	\begin{array}{l}
+	#1 \\ #2 \\ #3
+	\end{array}
+	\right.
+}
+
+\newcommand{\brackettworight}[2]{
+    \left.
+     \begin{array}{lr}
+       #1 \\
+       #2
+     \end{array}
+   \right\}}
+
+
+\newcommand{\piecewise}[4]{
+    \left\{
      \begin{array}{lr}
        #1 & \mbox{#2} \\ #3 & \mbox{#4}
      \end{array}
    \right.}
+
+   \newcommand{\limx}[1]{
+   	\lim_{x \to #1}
+   }
+    \newcommand{\limdx}[1]{
+    \lim_{\Delta x \to #1}
+   }
 
 \newcommand{\sip}[2]{\langle #1 , #2 \rangle}
 
@@ -149,6 +174,14 @@ Last Revision: \today
 \newcommand{\py}{\frac{\partial}{\partial y}}
 \newcommand{\jacu}{\frac{\partial(u,v)}{\partial(x,y)}}
 \newcommand{\jacx}{\frac{\partial(x,y)}{\partial(u,v)}}
+%New commands derivative
+\newcommand{\derx}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+\newcommand{\dert}[1]{\frac{\mathrm{d}}{\mathrm{d}t}(#1)}
+\newcommand{\derxx}[1]{\frac{\mathrm{d}#1}{\mathrm{d}x}}
+\newcommand{\derxt}[1]{\frac{\mathrm{d}#1}{\mathrm{d}t}}
+\newcommand{\dpri}[1]{(#1)'}
+\newcommand{\dsec}[1]{(#1)''}
+\newcommand{\dthi}[1]{(#1)'''}
 \newcommand{\vzero}{\vec{0}}
 \newcommand{\va}{\vec{a}}
 \newcommand{\vb}{\vec{b}}
