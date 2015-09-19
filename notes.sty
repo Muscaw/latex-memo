@@ -1,7 +1,9 @@
 %Modified the 18th december by Kevin Grandjean
 %Modified the 13th january by Kevin Grandjean
+%Modified the 19th of september by Kevin Grandjean
 %-Added newcommand limx
 %added newcommand derx dert derxx derxt dpri dsec dthi limdx
+%added new command setup
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -110,6 +112,12 @@ Dernière révision: \today
 #1
 \end{abstract}
 \setcounter{secnumdepth}{2}
+\setcounter{page}{2}
+\pagenumbering{arabic}
+}
+
+\newcommand{\setup}{
+  \setcounter{secnumdepth}{2}
 \setcounter{page}{2}
 \pagenumbering{arabic}
 }
