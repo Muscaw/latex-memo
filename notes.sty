@@ -43,7 +43,7 @@ cleveref,% \cref
 \definecolor{flame}{rgb}{0.89, 0.35, 0.13}
 \definecolor{dimgray}{rgb}{0.41, 0.41, 0.41}
 
-\geometry{verbose,tmargin=1.0in,bmargin=1.0in,lmargin=0.5in,rmargin=0.5in}
+\geometry{verbose,tmargin=1.0in,bmargin=1.0in,lmargin=1in,rmargin=0.5in}
 \pagestyle{fancy}
 \PassOptionsToPackage{normalem}{ulem}
 \makeindex
@@ -103,6 +103,7 @@ Dernière révision: \today
 \newcommand{\ubt}[2]{$\underbrace{\mbox{#1}}_{\mbox{#2}}$}
 \newcommand{\comb}[2]{{#1 \choose #2}}
 %added vecthree
+\newcommand{\vectwo}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
 \newcommand{\vecthree}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
 \newcommand{\vecn}[1]{\begin{pmatrix}#1_1 \\ #1_2 \\ \vdots  \\ #1_n\end{pmatrix}}
 \newcommand{\doabstract}[1]{
@@ -192,6 +193,7 @@ Dernière révision: \today
 \newcommand{\jacu}{\frac{\partial(u,v)}{\partial(x,y)}}
 \newcommand{\jacx}{\frac{\partial(x,y)}{\partial(u,v)}}
 %New commands derivative
+\newcommand{\der}[2]{\frac{d#1}{d#2}}
 \newcommand{\derx}[1]{\frac{d}{dx} (#1)}
 \newcommand{\dert}[1]{\frac{d}{dt}(#1)}
 \newcommand{\derxx}[1]{\frac{d#1}{dx}}
@@ -205,15 +207,55 @@ Dernière révision: \today
 \newcommand{\vc}{\vec{c}}
 \newcommand{\vd}{\vec{d}}
 \newcommand{\ve}{\vec{e}}
+\newcommand{\vf}{\vec{f}}
+\newcommand{\vg}{\vec{g}}
 \newcommand{\vh}{\vec{h}}
+\newcommand{\vi}{\vec{i}}
+\newcommand{\vj}{\vec{j}}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\vl}{\vec{l}}
+\newcommand{\vm}{\vec{m}}
 \newcommand{\vn}{\vec{n}}
+\newcommand{\vo}{\vec{o}}
+\newcommand{\vp}{\vec{p}}
+\newcommand{\vq}{\vec{q}}
+\newcommand{\vr}{\vec{r}}
 \newcommand{\vs}{\vec{s}}
+\newcommand{\vt}{\vec{t}}
 \newcommand{\vu}{\vec{u}}
 \newcommand{\vv}{{\vec{v}}}
 \newcommand{\vw}{\vec{w}}
 \newcommand{\vx}{\vec{x}}
 \newcommand{\vy}{\vec{y}}
 \newcommand{\vz}{\vec{z}}
+% Uppercase
+\newcommand{\vA}{\vec{A}}
+\newcommand{\vB}{\vec{B}}
+\newcommand{\vC}{\vec{C}}
+\newcommand{\vD}{\vec{D}}
+\newcommand{\vE}{\vec{E}}
+\newcommand{\vF}{\vec{F}}
+\newcommand{\vG}{\vec{G}}
+\newcommand{\vH}{\vec{H}}
+\newcommand{\vI}{\vec{I}}
+\newcommand{\vJ}{\vec{J}}
+\newcommand{\vK}{\vec{K}}
+\newcommand{\vL}{\vec{L}}
+\newcommand{\vM}{\vec{M}}
+\newcommand{\vN}{\vec{N}}
+\newcommand{\vO}{\vec{O}}
+\newcommand{\vP}{\vec{P}}
+\newcommand{\vQ}{\vec{Q}}
+\newcommand{\vR}{\vec{R}}
+\newcommand{\vS}{\vec{S}}
+\newcommand{\vT}{\vec{T}}
+\newcommand{\vU}{\vec{U}}
+\newcommand{\vV}{{\vec{v}}}
+\newcommand{\vW}{\vec{W}}
+\newcommand{\vX}{\vec{X}}
+\newcommand{\vY}{\vec{Y}}
+\newcommand{\vZ}{\vec{Z}}
+
 %Added script letters
 \newcommand{\sca}{\mathscr{A}}
 \newcommand{\scb}{\mathscr{B}}
